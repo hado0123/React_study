@@ -26,7 +26,7 @@ const App = () => {
    //    />
    // )
    return (
-      <MyComponent name={1} job="강사">
+      <MyComponent job="강사" forNumber={1}>
          맑음
       </MyComponent>
    )

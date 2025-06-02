@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const MyComponent = ({ name, job, forNumber, children }) => {
+const MyComponent = ({ name = '하서', job, forNumber, children }) => {
    //    console.log(props)
    // 비구조화 할당 방식으로 사용
    //    const { name = '하서', job, forNumber, children } = props
