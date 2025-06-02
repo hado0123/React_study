@@ -2,12 +2,17 @@
 // import 컴포넌트 함수명 from 파일명
 import MyComponent from './MyComponent'
 import Type from './Type'
+import Say from './Say'
+import InputText from './InputText'
 
 // function App() {}
 // 혹은
 
 // 1. props: 자식 컴포넌트에서 특정 속성을 이용해 속성값을 전달
 const App = () => {
+   return <InputText />
+
+   // return <Say />
    // 함수를 분리해서 전달
    // const func = (a, b) => {
    //    return a + b
@@ -25,11 +30,11 @@ const App = () => {
    //       // }}
    //    />
    // )
-   return (
-      <MyComponent job="강사" forNumber={1}>
-         맑음
-      </MyComponent>
-   )
+   // return (
+   //    <MyComponent job="강사" forNumber={1}>
+   //       맑음
+   //    </MyComponent>
+   // )
 }
 
 export default App
