@@ -1,4 +1,9 @@
+import { useParams } from 'react-router-dom'
+
 function MovieDetail() {
+   const { movieId } = useParams() // path에 있는 movieId를 가져옴
+   console.log(movieId)
+
    return (
       <div style={{ padding: '20px' }}>
          <div>
