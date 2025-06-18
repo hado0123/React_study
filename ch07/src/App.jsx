@@ -53,7 +53,9 @@ function App() {
    // 할 일 삭제
    const onRemove = useCallback(
       (id) => {
-         const removedTodos = todos.filter((todo) => todo.id != id)
+         //id = 2
+         const removedTodos = todos.filter((todo) => todo.id != id) // 3 != 2
+
          setTodos(removedTodos)
       },
       [todos]
@@ -62,8 +64,9 @@ function App() {
    // 할 일 완료, 미완료(토글)
    const onToggle = useCallback(
       (id) => {
+         // id = 1
          const toggleTodos = todos.map((todo) =>
-            todo.id === id
+            todo.id === id // 3 === 1
                ? {
                     ...todo,
                     checked: !todo.checked, //checked 값을 덮어쓴다
@@ -78,9 +81,7 @@ function App() {
 
    return (
       <TodoTemplate>
-         {/* todoInsert 컴포넌트에서 할일을 등록하므로 onInsert 함수를 props로 전달 */}
          <TodoInsert onInsert={onInsert} />
-         {/* TodoListItem 컴포넌트에서 삭제하므로 onRemove 함수를 props로 전달 */}
          <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
       </TodoTemplate>
    )

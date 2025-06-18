@@ -16,7 +16,7 @@ export const fetchMovies = createAsyncThunk('movies/fetchMovies', async () => {
 // 영화상세 정보 가져오기
 export const fetchMovieDetails = createAsyncThunk('movies/fetchMovieDetails', async (movieId) => {
    const response = await getMovieDetails(movieId)
-   console.log(response)
+   console.log(response.data)
    return response.data
 })
 
