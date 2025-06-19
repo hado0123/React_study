@@ -9,7 +9,7 @@ function MovieDetail() {
    /*
    state.movies = {
       movies: [...], // 인기영화목록
-      movieDetails: ... , // 영화 상세 정보
+      movieDetails: {...} , // 영화 상세 정보
       loading: false, // 로딩여부
       error: null, // 에러메세지
    }
